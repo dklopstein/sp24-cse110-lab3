@@ -15,6 +15,7 @@
                 <li><a href="#attendance">Attendance</a></li>
                 <li><a href="#agenda">Agenda</a></li>
                 <li><a href="#meeting-notes">Meeting Notes/Highlights</a></li>
+                <li><a href="#create-account">Create an Account</a></li>
             </ul>
         </nav>
     </header>
@@ -88,47 +89,49 @@
                 <a href="https://www.atptour.com/en/rankings/singles" target="_blank">live rankings</a> 
                 can give us a better idea of who is still an active player that could be a goat.
             </p>
-            <img src="assets/topspin graph.png" alt="Player Topspin Graph">
+            <img src="assets/topspin-graph.png" alt="Player Topspin Graph">
 
             <p>Analyzing Federer's 2017 win over Nadal.</p>
-            <video controls width="1000"><source src="assets/AO 2017 Final.mp4" type="video/mp4"/></video>
+            <video controls width="1000">
+                <source src="assets/AO-2017-Final.mp4" type="video/mp4">
+            </video>
             
             <p>Analyzing crowd loudness and their affect on player morale.</p>
 
             <h4>Australian Open 2017 final point audio:</h4>
-            <audio controls src="assets/AO 2017 Final.mp3"></audio>
+            <audio controls src="assets/AO-2017-Final.mp3"></audio>
             <hr>
         </section>
         
         <!-- form  -->
         <section>
-            <h3>Create an Account to Follow the Goat Debate</h3>
+            <h3 id="create-account">Create an Account to Follow the Goat Debate</h3>
 
             <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form -->
-            <form action="" method="get" class="form-example">
+            <form class="form">
 
                 <!-- first name -->
                 <div class="form">
-                <label for="first"><b>First name: </b></label>
-                <input type="text" name="first" id="name" required />
+                <label for="fname"><b>First name: </b></label>
+                <input type="text" name="fname" id="fname" required>
                 </div>
 
                 <!-- last name -->
                 <div class="form">
-                    <label for="last"><b>Last name: </b></label>
-                    <input type="text" name="last" id="name" required />
+                    <label for="lname"><b>Last name: </b></label>
+                    <input type="text" name="lname" id="lname" required>
                 </div>
 
                 <!-- email -->
                 <div class="form">
                 <label for="email"><b>Enter your email: </b></label>
-                <input type="email" name="email" id="email" required />
+                <input type="email" name="email" id="email" required>
                 </div>
 
                 <!-- dob -->
                 <div class="form">
                     <label for="date"><b>Enter your date of birth: </b></label>
-                    <input type="date" name="date" id="date" required />
+                    <input type="date" name="date" id="date" required>
                 </div>
 
                 <!-- pick a goat -->
@@ -151,9 +154,9 @@
                         <br>
 
                         <!-- other and datalist -->
-                        <input type="radio" name="player" id="other">
-                        <label for="other">Other:</label>
-                        <input list="other-options" name="other" id="other">
+                        <input type="radio" name="player" id="other-radio">
+                        <label for="other-input">Other:</label>
+                        <input list="other-options" name="other-options" id="other-input">
                         <datalist id="other-options">
                             <option value="Jannik Sinner"></option>
                             <option value="Carlos Alcaraz"></option>
@@ -166,15 +169,15 @@
 
                 <!-- question -->
                 <div class="form">
-                    <p><label for="question">(not required) Why do you think people debate who the goat is, despite Novak Djokovic having the grand slam titles?</label></p>
+                    <p><label for="question">Why do you think people debate who the goat is, despite Novak Djokovic having the most grand slam titles? (not required) </label></p>
                     <textarea name="question" id="question" cols="100" rows="10"></textarea>
                 </div>
 
 
                 <!-- mailing list and select -->
                 <div class="form">
-                    <label for="stay-login">Subscribe to our mailing list for even more content!</label>
-                    <input type="checkbox">
+                    <label for="subscribe">Subscribe to our mailing list for even more content!</label>
+                    <input type="checkbox" id="subscribe">
                 </div>
 
                 <div class="form">
