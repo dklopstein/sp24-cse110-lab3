@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSE110 Lab 2</title>
+    <!-- https://www.w3schools.com/html/html_favicon.asp -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+  </head>
+  <body>
+    <header>
+        <!-- navigation -->
+        <div>Navigation:</div>
+
+        <nav>
+            <ul>
+                <li><a href="#attendance">Attendance</a></li>
+                <li><a href="#agenda">Agenda</a></li>
+                <li><a href="#meeting-notes">Meeting Notes/Highlights</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- title, subtitle and date -->
+        <section>
+            <h1>ATP Player Team Meeting: Goat Discussion</h1>
+            <h2>April 14, 2024: brainstorming, documentation</h2>
+            <hr>
+        </section>
+        
+        <!-- attendance and absentees -->
+        <section>
+            <h3 id="attendance">Attendance: </h3>
+            <ul>
+                <li>Roger Federer</li>
+                <li>Rafael Nadal</li>
+                <li>Novak Djokovic</li>
+                <li>Andy Murray</li>
+                <li>Carlos Alcaraz</li>
+                <li>Juan Martín del Potro</li>
+                <li>Björn Borg</li>
+                <li>John McEnroe</li>
+            </ul>
+
+            <h3>Absent:</h3>
+            <ul>
+                <li>
+                    <details>
+                        <summary>Nick Kyrgios</summary>
+                        went partying in The Bahamas, and <em>claims</em>, "Roger is the goat no doubt"
+                    </details>
+                </li>
+            </ul>
+            <hr>
+        </section>
+
+        <!-- agenda and meeting flow -->
+        <section>
+            <h3 id="agenda">Agenda:</h3>
+            <ol>
+                <li>Comparing stats and titles of players</li>
+                <li>Finding any stat discrepencies on different surfaces</li>
+                <li>Discuss player <i>likability</i> and temperment</li>
+                <li>Discuss players' <strong>overall impact and contribution</strong> to the game</li>
+            </ol>
+
+            <h3>Continue Discussing:</h3>
+            <ol>
+                <li>Injuries and their <b>impact</b> on the player</li>
+            </ol>
+
+            <h3>Questions:</h3>
+            <ul>
+                <li>Why does <i>any</i> of this matter?</li>
+                <li>What defines a <i>goat</i> in tennis?</li>
+            </ul>
+            <hr>
+        </section>
+
+        <!-- meeting notes and discussion -->
+        <section>
+            <h3 id="meeting-notes">Meeting Notes/Highlights:</h3>
+            <p>
+                Created graph of <span>forehand</span> and backhand topspin rates to get a better look at
+                each player individually and how they might compare to those outside the <i>goat</i>
+                discussion. We might consider adding more players, or just comparing those in the <i>goat</i> 
+                discussion. We also thought that averaging their topspin rates over all their years playing
+                might be something interesting to look at. Taking a look at the  
+                <a href="https://www.atptour.com/en/rankings/singles" target="_blank">live rankings</a> 
+                can give us a better idea of who is still an active player that could be a goat.
+            </p>
+            <img src="assets/topspin graph.png" alt="Player Topspin Graph">
+
+            <p>Analyzing Federer's 2017 win over Nadal.</p>
+            <video controls width="1000"><source src="assets/AO 2017 Final.mp4" type="video/mp4"/></video>
+            
+            <p>Analyzing crowd loudness and their affect on player morale.</p>
+
+            <h4>Australian Open 2017 final point audio:</h4>
+            <audio controls src="assets/AO 2017 Final.mp3"></audio>
+            <hr>
+        </section>
+        
+        <!-- form  -->
+        <section>
+            <h3>Create an Account to Follow the Goat Debate</h3>
+
+            <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form -->
+            <form action="" method="get" class="form-example">
+
+                <!-- first name -->
+                <div class="form">
+                <label for="first"><b>First name: </b></label>
+                <input type="text" name="first" id="name" required />
+                </div>
+
+                <!-- last name -->
+                <div class="form">
+                    <label for="last"><b>Last name: </b></label>
+                    <input type="text" name="last" id="name" required />
+                </div>
+
+                <!-- email -->
+                <div class="form">
+                <label for="email"><b>Enter your email: </b></label>
+                <input type="email" name="email" id="email" required />
+                </div>
+
+                <!-- dob -->
+                <div class="form">
+                    <label for="date"><b>Enter your date of birth: </b></label>
+                    <input type="date" name="date" id="date" required />
+                </div>
+
+                <!-- pick a goat -->
+                <div class="form">
+                    <fieldset>
+                        <legend><b>In your opinion, who is the goat?</b></legend>
+                        <!-- Roger Federer -->
+                        <input type="radio" name="player" id="federer">
+                        <label for="federer">Roger Federer</label>
+                        <br>
+
+                        <!-- Rafael Nadal -->
+                        <input type="radio" name="player" id="nadal">
+                        <label for="nadal">Rafael Nadal</label>
+                        <br>
+
+                        <!-- Novak Djokovic -->
+                        <input type="radio" name="player" id="djokovic">
+                        <label for="djokovic">Novak Djokovic</label>
+                        <br>
+
+                        <!-- other and datalist -->
+                        <input type="radio" name="player" id="other">
+                        <label for="other">Other:</label>
+                        <input list="other-options" name="other" id="other">
+                        <datalist id="other-options">
+                            <option value="Jannik Sinner"></option>
+                            <option value="Carlos Alcaraz"></option>
+                            <option value="Gaël Monfils"></option>
+                            <option value="Marin Čilić"></option>
+                        </datalist>
+                        <br>
+                    </fieldset>
+                </div>
+
+                <!-- question -->
+                <div class="form">
+                    <p><label for="question">(not required) Why do you think people debate who the goat is, despite Novak Djokovic having the grand slam titles?</label></p>
+                    <textarea name="question" id="question" cols="100" rows="10"></textarea>
+                </div>
+
+
+                <!-- mailing list and select -->
+                <div class="form">
+                    <label for="stay-login">Subscribe to our mailing list for even more content!</label>
+                    <input type="checkbox">
+                </div>
+
+                <div class="form">
+                    <label for="mail-choice">What would you like emails about:</label>
+                    <select id="mail-choice" name="mail-choice">
+                        <option value="news">News and Updates</option>
+                        <option value="reminders">Next Debate Reminders</option>
+                        <option value="rankings">ATP Ranking Updates</option>
+                        <option value="everything">Everything!</option>
+                    </select>
+                </div>
+
+                <!-- create account -->
+                <div class="form">
+                    <button type="button">Create Account!</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        This page was created by Derek Klopstein for use in CSE 110 at UCSD.
+    </footer>
+  </body>
+</html>
