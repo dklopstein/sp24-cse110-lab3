@@ -1,0 +1,41 @@
+/*  external css */
+
+h1 {
+    /* color with color name */
+    color: white;
+}
+
+
+h2 {
+    /* color with hsl */
+    color: hsl(0, 0%, 100%);
+}
+
+h3 {
+    /* color with hex codes */
+    color: #ffffff;
+}
+
+nav {
+    color: white;
+}
+
+ul {
+    color: white;
+}
+
+main {
+    color: white;
+}
+
+/* id selector */
+#absent {
+    /* color function */
+    color: color(display-p3 1 0 0.331);
+}
+
+/* class selector */
+.form {
+    /* color-mix */
+    color: color-mix(in lch, rgb(255, 255, 255), pink);
+}

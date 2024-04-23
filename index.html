@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CSE110 Lab 2</title>
+    <title>CSE110 Lab 3</title>
     <!-- https://www.w3schools.com/html/html_favicon.asp -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
   </head>
+  <style>
+    /* red, green, blue, alpha */
+    body {
+        background-color: rgba(0, 0, 0, 0.925);
+    }
+  </style>
   <body>
     <header>
         <!-- navigation -->
-        <div>Navigation:</div>
+        <!-- rgb color with inline css -->
+        <div style="color:rgb(255, 255, 255);">Navigation:</div>
 
         <nav>
             <ul>
@@ -43,7 +51,7 @@
             </ul>
 
             <h3>Absent:</h3>
-            <ul>
+            <ul id="absent">
                 <li>
                     <details>
                         <summary>Nick Kyrgios</summary>
