@@ -140,3 +140,28 @@ ul.player-names {
     column-gap: 50px;
     flex-flow: wrap;
 }
+
+/* media query */
+@media screen and (width <= 1000px) {
+    ul.player-names {
+        display: block;
+    }
+
+    #absent {
+        display: block;
+    }
+
+    #navigation {
+        display: inline-block;
+    }
+    
+    li.navbar {
+        text-align: center;
+        /* spacing */
+        padding: 0.75rem;
+        margin-top: 10px;
+    }
+    form {
+        font-size: 2vh;
+    }
+}
