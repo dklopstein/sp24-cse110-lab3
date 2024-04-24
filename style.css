@@ -1,10 +1,16 @@
 /*  external css */
 
-#main-title {
-    color: var(--main-color);
+/* universal selector */
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-h1 {
+#main-title {
+    color: var(--main-color);
+    text-decoration: rgb(255, 0, 221) wavy underline overline;
+}
+
+main, h1 {
     /* color with color name */
     color: white;
 }
@@ -29,10 +35,6 @@ ul {
     margin: auto;
 }
 
-main {
-    color: white;
-}
-
 /* id selector */
 #absent {
     /* color function */
@@ -50,17 +52,17 @@ main {
     /* positioning */
     display: inline-block;
     list-style: none;
-    margin: 1cm;
+    margin: .5cm;
     padding-top: 1em;
 
     font-size: 1.5vmax;
 }
 
-.navbar {
+li.navbar {
     text-align: center;
     /* spacing */
     padding: 0.75rem;
-    margin-top: 4px;
+    margin-top: 10px;
 
     /* border and color */
     border-style: solid;
@@ -68,6 +70,16 @@ main {
     border-radius: 20px;
     border-color: white;
     background-color: rgb(95, 95, 95);
+}
+
+#meeting-notes {
+    text-align: center;
+}
+
+a {
+    color: var(--main-color, white);
+    text-decoration: none;
+    font-weight: bold;
 }
 
 /* variable */
