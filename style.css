@@ -1,12 +1,18 @@
 /*  external css */
 
+/* variables */
+:root {
+    --main-color: color-mix(in lch, rgb(255, 255, 255), pink);
+}
+
 /* universal selector */
 * {
+    /* font */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #main-title {
-    color: var(--main-color);
+    color: var(--main-color, white);
     text-decoration: rgb(255, 0, 221) wavy underline overline;
 }
 
@@ -82,10 +88,55 @@ a {
     font-weight: bold;
 }
 
-/* variable */
-@property --main-color {
-    syntax: "<color>";
-    inherits: false;
-    /* color mix */
-    initial-value: color-mix(in lch, rgb(255, 255, 255), pink);
+
+img {
+    display: flex;
+    height: 50%;
+    width: 50%;
+    position: relative;
+    right: -25%;
+}
+
+video {
+    position: static;
+    max-height: 50%;
+    max-width: 50%;
+}
+
+ol {
+    display: grid;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    font-size: large;
+}
+
+/* hover */
+button:hover {
+    transition: 0.5s;
+    background-color: rgb(29, 221, 29);
+    color: white;
+}
+
+/* active */
+button:active {
+    box-shadow: 2px 2px 100px rgb(29, 221, 29);
+}
+
+/* grid */
+ul.player-names {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 30px 30px 30px 30px;
+    grid-auto-flow: row;
+}
+
+/* flex box */
+#absent {
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+    flex-flow: wrap;
 }
