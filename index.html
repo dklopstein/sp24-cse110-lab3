@@ -9,7 +9,7 @@
   <style>
     /* red, green, blue, alpha */
     body {
-        background-color: rgb(87, 87, 87);
+        background-color: rgba(0, 0, 0, 0.925);
     }
   </style>
   <body>
@@ -19,11 +19,11 @@
         <div style="color:rgb(255, 255, 255);">Navigation:</div>
 
         <nav>
-            <ul id="navigation">
-                <li class="navbar"><a href="#attendance">Attendance</a></li>
-                <li class="navbar"><a href="#agenda">Agenda</a></li>
-                <li class="navbar"><a href="#meeting-notes">Meeting Notes/Highlights</a></li>
-                <li class="navbar"><a href="#create-account">Create an Account</a></li>
+            <ul>
+                <li><a href="#attendance">Attendance</a></li>
+                <li><a href="#agenda">Agenda</a></li>
+                <li><a href="#meeting-notes">Meeting Notes/Highlights</a></li>
+                <li><a href="#create-account">Create an Account</a></li>
             </ul>
         </nav>
     </header>
@@ -39,7 +39,7 @@
         <!-- attendance and absentees -->
         <section>
             <h3 id="attendance">Attendance: </h3>
-            <ul>
+            <ul class="player-names">
                 <li>Roger Federer</li>
                 <li>Rafael Nadal</li>
                 <li>Novak Djokovic</li>
@@ -48,6 +48,14 @@
                 <li>Juan Martín del Potro</li>
                 <li>Björn Borg</li>
                 <li>John McEnroe</li>
+                <li>Mackie McDonald</li>
+                <li>Francis Tiafoe</li>
+                <li>Casper Ruud</li>
+                <li>Grigor Dimitrov</li>
+                <li>John Isner</li>
+                <li>Lleyton Hewit</li>
+                <li>Michael Chang</li>
+                <li>Dominic Thiem</li>
             </ul>
 
             <h3>Absent:</h3>
@@ -56,6 +64,18 @@
                     <details>
                         <summary>Nick Kyrgios</summary>
                         went partying in The Bahamas, and <em>claims</em>, "Roger is the goat no doubt"
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Ben Shelton</summary>
+                        actually came to the meeting, but was kicked out because he wasn't invited
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Jack Sock</summary>
+                        too busy playing pickle ball now to care about tennis
                     </details>
                 </li>
             </ul>
