@@ -1,5 +1,9 @@
 /*  external css */
 
+#main-title {
+    color: var(--main-color);
+}
+
 h1 {
     /* color with color name */
     color: white;
@@ -22,6 +26,7 @@ nav {
 
 ul {
     color: white;
+    margin: auto;
 }
 
 main {
@@ -36,6 +41,39 @@ main {
 
 /* class selector */
 .form {
-    /* color-mix */
-    color: color-mix(in lch, rgb(255, 255, 255), pink);
+    /* fallback for --main-color */
+    color: var(--main-color, white);
+}
+
+/* box model */
+#navigation {
+    /* positioning */
+    display: inline-block;
+    list-style: none;
+    margin: 1cm;
+    padding-top: 1em;
+
+    font-size: 1.5vmax;
+}
+
+.navbar {
+    text-align: center;
+    /* spacing */
+    padding: 0.75rem;
+    margin-top: 4px;
+
+    /* border and color */
+    border-style: solid;
+    border-width: 1mm;
+    border-radius: 20px;
+    border-color: white;
+    background-color: rgb(95, 95, 95);
+}
+
+/* variable */
+@property --main-color {
+    syntax: "<color>";
+    inherits: false;
+    /* color mix */
+    initial-value: color-mix(in lch, rgb(255, 255, 255), pink);
 }
